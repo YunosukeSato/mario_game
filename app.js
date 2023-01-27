@@ -10,6 +10,7 @@ function isTouching(a, b) {
   );
 }
 
+// check whether it's exceeding the window.innerHeight, innerWidth or not
 function isExceeding(element, direction) {
   const elementRect = element.getBoundingClientRect();
 
@@ -26,12 +27,15 @@ function isExceeding(element, direction) {
 
 const init = () => {
   moveCoin();
+  // 'h1' is score text
   const scoreH1 = document.querySelector("h1");
   let score = 0;
   window.addEventListener("keyup", function (e) {
+    // get avatar position
     const avatarRect = avatar.getBoundingClientRect();
 
     if (e.key === "ArrowDown" || e.key === "Down") {
+      // if the avatar is expected to exceed when he moves, he will move not 50px but until the end of the window.
       if (isExceeding(avatar, "Down")) {
         moveVertical(
           avatar,
@@ -63,6 +67,7 @@ const init = () => {
       }
     }
 
+    // once he touch the coin, score will be added
     if (isTouching(avatar, coin)) {
       score += 1;
       scoreH1.textContent = `SCORE:${score}`;
