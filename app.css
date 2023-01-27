@@ -1,12 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
 
-html{
-    font-family: 'Press Start 2P', cursive;
+html {
+  font-family: "Press Start 2P", cursive;
+}
+
+h1 {
+  z-index: -1;
 }
 
 img {
-    width: 100px;
-    position: absolute;
-    top: 100px;
-    left: 100px;
+  width: 100px;
+  position: absolute;
+  top: 100px;
+  left: 100px;
 }
